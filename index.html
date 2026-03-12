@@ -7,6 +7,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Cormorant:ital,wght@1,400;1,500&family=Cinzel:wght@700;900&family=Barlow+Condensed:ital,wght@1,700;1,800&display=swap" rel="stylesheet">
 <style>
+  /* Force text visible even if fonts fail to load */
+  .hero-title, .about-heading, .section-header h2, .why-text h2,
+  .area-inner h2, .contact-info h2, .service-card h3, .owner-quote,
+  .about-sig, .pillar-body h4 {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif !important;
+  }
+  .hero-title {
+    font-family: 'Cinzel', Georgia, 'Times New Roman', serif !important;
+  }
+  body, nav, .nav-links, .btn-primary, .btn-outline, .tab-btn,
+  .service-card p, .about-text, .why-text p, .pillar-body p,
+  .area-inner p, .contact-info p, .contact-detail-text, .form-field label,
+  .hero-subtitle, .hero-eyebrow, .hero-territory p {
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif !important;
+  }
+</style>
+<style>
   :root {
     --bark: #2C1A0E;
     --bark-light: #4A2E1A;
@@ -109,7 +126,6 @@
     line-height: 1.0;
     color: var(--cream);
     margin-bottom: 0.3em;
-    animation: fadeUp 1s ease both;
     text-transform: uppercase;
     letter-spacing: 0.06em;
   }
@@ -152,11 +168,9 @@
     margin-bottom: 2.5rem;
     max-width: 520px;
     line-height: 1.7;
-    animation: fadeUp 1s 0.2s ease both;
   }
   .hero-cta {
     display: flex; gap: 1.2rem; flex-wrap: wrap;
-    animation: fadeUp 1s 0.4s ease both;
   }
   .btn-primary {
     background: var(--gold);
@@ -352,8 +366,7 @@
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .fade-in.visible { opacity: 1; transform: translateY(0); }
+  .fade-in { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s ease; }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
@@ -802,7 +815,7 @@
           <div class="contact-detail-icon">✉️</div>
           <div class="contact-detail-text">
             <strong>Email</strong>
-            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1c7a736e796f686b7570787f73726f6970687d72686f5c7b717d7570327f7371">[email&#160;protected]</a>
+            <a href="mailto:forestwildconsultants@gmail.com">forestwildconsultants@gmail.com</a>
           </div>
         </div>
         <div class="contact-detail">
@@ -878,15 +891,7 @@
 
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Scroll-triggered fade-ins
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+<script>
 
   // Form submit handler
   function handleSubmit(e) {
