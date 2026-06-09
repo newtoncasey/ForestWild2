@@ -319,7 +319,7 @@
     background: var(--canopy);
     padding: 7rem 4rem;
   }
-  .contact-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+  .contact-inner { max-width: 760px; margin: 0 auto; display: block; }
   .contact-info h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); color: var(--cream); margin-bottom: 1.5rem; }
   .contact-info h2 span { color: var(--gold); }
   .contact-info p { font-family: 'DM Sans', sans-serif; font-size: 0.97rem; color: var(--fog); line-height: 1.8; margin-bottom: 2rem; }
@@ -328,6 +328,8 @@
   .contact-detail-icon { color: var(--gold); font-size: 1.1rem; margin-top: 0.1rem; }
   .contact-detail-text { font-size: 0.9rem; color: var(--fog); line-height: 1.6; }
   .contact-detail-text strong { display: block; color: var(--cream); font-family: 'Cormorant Garamond', serif; margin-bottom: 0.2rem; }
+  .contact-detail-text a { color: var(--gold-light); text-decoration: none; border-bottom: 1px solid rgba(232,184,90,0.4); transition: color 0.3s, border-color 0.3s; }
+  .contact-detail-text a:hover { color: var(--cream); border-color: var(--cream); }
 
   .contact-form { display: flex; flex-direction: column; gap: 1rem; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -870,21 +872,22 @@
           <div class="contact-detail-icon">📍</div>
           <div class="contact-detail-text">
             <strong>Office Location</strong>
-            Florence, Alabama 35630
+            220 W. Tennessee St.<br>
+            Florence, AL 35630
           </div>
         </div>
         <div class="contact-detail">
           <div class="contact-detail-icon">📞</div>
           <div class="contact-detail-text">
             <strong>Phone</strong>
-            (256) 762-4617
+            <a href="tel:+12567624617">(256) 762-4617</a>
           </div>
         </div>
         <div class="contact-detail">
           <div class="contact-detail-icon">✉️</div>
           <div class="contact-detail-text">
             <strong>Email</strong>
-            <a href="mailto:forestwildconsultants@gmail.com">forestwildconsultants@gmail.com</a>
+            <a href="mailto:forestwild.cn@outlook.com">forestwild.cn@outlook.com</a>
           </div>
         </div>
         <div class="contact-detail">
@@ -896,54 +899,6 @@
         </div>
       </div>
     </div>
-
-    <form class="contact-form fade-in" onsubmit="handleSubmit(event)">
-      <div class="form-row">
-        <div class="form-field">
-          <label>First Name</label>
-          <input type="text" placeholder="John">
-        </div>
-        <div class="form-field">
-          <label>Last Name</label>
-          <input type="text" placeholder="Smith">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-field">
-          <label>Phone</label>
-          <input type="tel" placeholder="">
-        </div>
-        <div class="form-field">
-          <label>Email</label>
-          <input type="email" placeholder="you@email.com">
-        </div>
-      </div>
-      <div class="form-field">
-        <label>State / County</label>
-        <input type="text" placeholder="e.g. Lauderdale County, AL">
-      </div>
-      <div class="form-field">
-        <label>Service Needed</label>
-        <select>
-          <option value="">Select a service...</option>
-          <option>Forest Management Planning</option>
-          <option>Wildlife Habitat Enhancement</option>
-          <option>Timber Sale / Harvesting</option>
-          <option>Prescribed Fire / TSI</option>
-          <option>Boundary & Inventory</option>
-          <option>Conservation Program Enrollment</option>
-          <option>Hunting Lease Consulting</option>
-          <option>Reforestation</option>
-          <option>General Consultation</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="form-field">
-        <label>Tell Us About Your Land &amp; Goals</label>
-        <textarea rows="5" placeholder="Approximate acreage, property type, current condition, and what you're hoping to achieve..."></textarea>
-      </div>
-      <button type="submit" class="btn-primary" style="align-self:flex-start">Send Message →</button>
-    </form>
   </div>
 </section>
 
@@ -963,14 +918,6 @@
 <script>
 
   // Form submit handler
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('button[type="submit"]');
-    btn.textContent = '✓ Message Sent';
-    btn.style.background = 'var(--canopy-light)';
-    btn.disabled = true;
-  }
-
   // Smooth nav highlight
   document.querySelectorAll('nav a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
