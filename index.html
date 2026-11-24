@@ -642,25 +642,25 @@
   .acremark-shots { display: grid; gap: 1rem; }
   .am-shot { width: 100%; height: auto; display: block; border: 1px solid rgba(200,151,58,0.35); box-shadow: 0 10px 30px rgba(0,0,0,0.45); }
   @media (max-width: 900px) { .acremark-feature { grid-template-columns: 1fr; padding: 1.5rem; } }
-  .am-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 1.2rem; }
-  .am-group { padding: 1.5rem 1.6rem; background: rgba(44,26,14,0.55); border-top: 2px solid var(--gold); }
-  .am-group h4, .am-ed h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; color: var(--cream); margin: 0 0 0.7rem; }
-  .am-group ul { margin: 0; padding-left: 1.1rem; }
-  .am-group li, .am-ed p { font-family: 'DM Sans', Arial, sans-serif; color: var(--fog); font-size: 0.9rem; line-height: 1.65; margin-bottom: 0.35rem; }
-  .am-editions { margin-top: 1.2rem; padding: 1.8rem 1.6rem; border: 1px solid rgba(200,151,58,0.35); }
-  .am-ed-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-  .am-ed { padding-left: 1rem; border-left: 2px solid var(--lichen); }
-  @media (max-width: 900px) { .am-groups, .am-ed-grid { grid-template-columns: 1fr; } }
+  .field-section { background: var(--bark); padding: 6rem 4rem; }
+  .field-inner { max-width: 1200px; margin: 0 auto; }
+  .field-group-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; color: var(--cream); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(200,151,58,0.35); }
+  .field-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+  .field-photo { margin: 0; background: rgba(28,58,30,0.4); }
+  .field-photo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; }
+  .field-photo figcaption { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.8rem; color: var(--fog); padding: 0.6rem 0.75rem 0.8rem; line-height: 1.45; }
+  @media (max-width: 900px) { .field-section { padding: 4rem 1.5rem; } .field-grid { grid-template-columns: repeat(2, 1fr); gap: 0.7rem; } }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo"><img src="images/forestwild-logo.png" alt="ForestWild Consultants LLC"></a>
+  <a href="#" class="nav-logo"><img src="forestwild-logo.png" alt="ForestWild Consultants LLC"></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#field">Field Photos</a></li>
     <li><a href="#area">Service Area</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="land-sales.html">Land Sales</a></li>
@@ -693,7 +693,7 @@
 
   <div class="hero-content">
     <div class="hero-logo-wrap" style="margin-bottom:1.5rem;">
-      <img src="images/forestwild-logo.png" alt="ForestWild Consultants LLC" style="height:160px;width:auto;filter:drop-shadow(0 6px 32px rgba(0,0,0,0.8));animation:fadeUp 0.8s ease both;">
+      <img src="forestwild-logo.png" alt="ForestWild Consultants LLC" style="height:160px;width:auto;filter:drop-shadow(0 6px 32px rgba(0,0,0,0.8));animation:fadeUp 0.8s ease both;">
     </div>
     <div class="hero-eyebrow">Forest Management &amp; Wildlife Services</div>
     <h1 class="hero-title">
@@ -783,7 +783,7 @@
           <p style="font-family:'DM Sans',sans-serif;color:var(--gold-light);font-size:0.95rem;line-height:1.8;margin-bottom:1rem;font-weight:500;">What we won&rsquo;t do is push you into a sale that doesn&rsquo;t serve your interests.</p>
         </div>
         <div class="timber-photo-wrap">
-          <img src="images/pine-stand.jpg" alt="Managed pine stand — ForestWild Consultants" class="timber-photo">
+          <img src="pine-stand.jpg" alt="Managed pine stand — ForestWild Consultants" class="timber-photo">
           <p class="timber-photo-caption">A well-managed loblolly pine stand ready for its next chapter</p>
         </div>
         </div>
@@ -804,58 +804,21 @@
         <div class="acremark-text">
           <p class="acremark-label">Our Own Tool</p>
           <h3 class="acremark-title"><span class="am-big">A</span>cre<span class="am-big">M</span>ark</h3>
-          <p>Most properties are run out of a truck console: a plat in one folder, a cruise in another, harvest records in a notebook, trail camera photos on three phones, and the hunt schedule in a group text. AcreMark puts all of it on one map that works in the woods. We built it for the properties we manage, and it is set up for each landowner, hunter, and land manager on the place.</p>
+          <p>AcreMark is the land and hunting management app we built and use on the properties we manage. Everything about the place lives on one map.</p>
+          <ul class="acremark-list">
+            <li>Satellite map with your boundaries, stands, roads, and food plots</li>
+            <li>Hunt sign-ups, so everyone knows who is hunting where, in real time</li>
+            <li>Harvest records for deer, turkey, bobcat, and other game and non-game wildlife</li>
+            <li>Feeders and trail cameras pinned on the map</li>
+            <li>Field photos pinned where they were taken, with the time and the weather</li>
+            <li>Works offline in the woods, and only the people you invite can see it</li>
+          </ul>
+          <a href="#contact" class="btn-outline" style="display:inline-block;margin-top:1.2rem;">Ask About AcreMark</a>
         </div>
         <div class="acremark-shots">
-          <img src="images/acremark-map.jpg" alt="AcreMark property map" class="am-shot am-main" onerror="this.remove()">
-          <img src="images/acremark-options.jpg" alt="AcreMark hunting and wildlife options" class="am-shot" onerror="this.remove()">
+          <img src="acremark-map.jpg" alt="AcreMark property map" class="am-shot am-main" onerror="this.remove()">
+          <img src="acremark-options.jpg" alt="AcreMark hunting and wildlife options" class="am-shot" onerror="this.remove()">
         </div>
-      </div>
-      <div class="am-groups">
-        <div class="am-group">
-          <h4>Run the Hunt</h4>
-          <ul>
-            <li>Stands, blinds, feeders, food plots, and trail cameras pinned on a satellite map</li>
-            <li>Hunt sign-ups and a group board, so everyone sees who is hunting where in real time</li>
-            <li>Harvest records for deer, turkey, bobcat, and other game and non-game wildlife</li>
-            <li>Trail camera photos filed by location, with the time and the weather when each was taken</li>
-            <li>Hunt lease tracking for landowners who lease</li>
-          </ul>
-        </div>
-        <div class="am-group">
-          <h4>Manage the Land</h4>
-          <ul>
-            <li>Stand maps with species, age, and a timber summary that opens up into the full detail</li>
-            <li>Growth and yield for the species on each stand, for its location</li>
-            <li>Burn plans, management practices, cost-share work, and a dated action plan</li>
-            <li>Field photos and notes pinned exactly where they were taken</li>
-          </ul>
-        </div>
-        <div class="am-group">
-          <h4>Know the Property</h4>
-          <ul>
-            <li>Bring in the maps you already have: shapefiles, geodatabases, KML/KMZ, surveys, drone photos and video</li>
-            <li>A land record that keeps the property&rsquo;s history in one place</li>
-            <li>Land and timber values and comparable sales for owners thinking about buying or selling</li>
-          </ul>
-        </div>
-        <div class="am-group">
-          <h4>Share It Your Way</h4>
-          <ul>
-            <li>Invite-only. The owner decides who gets in, and can keep sections private</li>
-            <li>Hunters, crews, and managers each see the tools that fit their role</li>
-            <li>Works offline where there is no signal</li>
-          </ul>
-        </div>
-      </div>
-      <div class="am-editions">
-        <p class="acremark-label" style="margin-bottom:0.9rem;">Three Editions</p>
-        <div class="am-ed-grid">
-          <div class="am-ed"><h4>Hunt &amp; Wildlife Management</h4><p>Built around the hunt: stands, sign-ups, harvest, cameras, and habitat, with a light timber view.</p></div>
-          <div class="am-ed"><h4>Land</h4><p>For owners, buyers, and sellers: timber, values, and the land record, with a lighter hunting side.</p></div>
-          <div class="am-ed"><h4>Complete</h4><p>Everything, including burn plans, cost-share practices, and the full management action plan.</p></div>
-        </div>
-        <a href="#contact" class="btn-outline" style="display:inline-block;margin-top:1.6rem;">Ask About AcreMark for Your Property</a>
       </div>
     </div>
 
@@ -875,6 +838,36 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- FIELD PHOTOS -->
+<section id="field" class="field-section">
+  <div class="field-inner">
+    <div class="section-header fade-in">
+      <p class="label">From the Field</p>
+      <h2>Work on the <span>Ground</span></h2>
+    </div>
+    <h3 class="field-group-title">Timber Sales &amp; Harvests</h3>
+    <div class="field-grid">
+      <figure class="field-photo"><img src="Grade%20logs%20merchandised%20for%20export.jpeg" alt="Grade hardwood logs merchandised for export" loading="lazy"><figcaption>Grade hardwood logs merchandised for export</figcaption></figure>
+      <figure class="field-photo"><img src="IMG_0808.jpeg" alt="Hardwood sawlogs on the deck" loading="lazy"><figcaption>Hardwood sawlogs on the deck</figcaption></figure>
+      <figure class="field-photo"><img src="IMG_0294.jpeg" alt="Tagged logs, accounted for from stump to mill" loading="lazy"><figcaption>Tagged logs, accounted for from stump to mill</figcaption></figure>
+      <figure class="field-photo"><img src="Recent%20Pine%20Thinning%20%282%29.jpeg" alt="Pine stand after a recent thinning" loading="lazy"><figcaption>Pine stand after a recent thinning</figcaption></figure>
+      <figure class="field-photo"><img src="Recent%20Pine%20Thinning.jpeg" alt="Thinned pine, opened up for growth and wildlife" loading="lazy"><figcaption>Thinned pine, opened up for growth and wildlife</figcaption></figure>
+    </div>
+    <h3 class="field-group-title">Prescribed Fire</h3>
+    <div class="field-grid">
+      <figure class="field-photo"><img src="IMG_0803.jpeg" alt="Lighting a prescribed burn" loading="lazy"><figcaption>Lighting a prescribed burn</figcaption></figure>
+      <figure class="field-photo"><img src="Site%20Preparation%20Fire.JPG" alt="Site preparation burn" loading="lazy"><figcaption>Site preparation burn</figcaption></figure>
+      <figure class="field-photo"><img src="Understory%20Fire.jpeg" alt="Low-intensity understory burn" loading="lazy"><figcaption>Low-intensity understory burn</figcaption></figure>
+    </div>
+    <h3 class="field-group-title">The Land</h3>
+    <div class="field-grid">
+      <figure class="field-photo"><img src="IMG_0043.jpeg" alt="Creek frontage in the fall" loading="lazy"><figcaption>Creek frontage in the fall</figcaption></figure>
+      <figure class="field-photo"><img src="IMG_0720.jpeg" alt="A big yellow-poplar on a client property" loading="lazy"><figcaption>A big yellow-poplar on a client property</figcaption></figure>
+      <figure class="field-photo"><img src="IMG_0691.jpeg" alt="Out on the land" loading="lazy"><figcaption>Out on the land</figcaption></figure>
+    </div>
   </div>
 </section>
 
