@@ -650,6 +650,18 @@
   .field-photo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; }
   .field-photo figcaption { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.8rem; color: var(--fog); padding: 0.6rem 0.75rem 0.8rem; line-height: 1.45; }
   @media (max-width: 900px) { .field-section { padding: 4rem 1.5rem; } .field-grid { grid-template-columns: repeat(2, 1fr); gap: 0.7rem; } }
+  .am-panel { margin-top: 2.5rem; padding: 2.2rem; border: 1px solid rgba(200,151,58,0.35); background: rgba(28,58,30,0.45); }
+  .am-head { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; align-items: start; }
+  .am-head:has(> :only-child) { grid-template-columns: 1fr; }
+  .am-lead { font-family: 'DM Sans', Arial, sans-serif; color: var(--fog); font-size: 0.95rem; line-height: 1.75; max-width: 760px; }
+  .am-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; margin-top: 1.6rem; }
+  .am-group { padding: 1.3rem 1.5rem; background: rgba(44,26,14,0.55); border-top: 2px solid var(--gold); }
+  .am-group h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; color: var(--cream); margin: 0 0 0.6rem; }
+  .am-group ul { margin: 0; padding-left: 1.1rem; }
+  .am-group li { font-family: 'DM Sans', Arial, sans-serif; color: var(--fog); font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.35rem; }
+  .am-edition { font-family: 'DM Sans', Arial, sans-serif; color: var(--lichen); font-size: 0.85rem; margin: 1.4rem 0 0; }
+  .am-edition strong { color: var(--cream); }
+  @media (max-width: 900px) { .am-panel { padding: 1.4rem; } .am-head, .am-groups { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -788,7 +800,45 @@
         </div>
         </div>
       </div>
-    </div></div>
+      <div class="am-panel">
+        <div class="am-head">
+          <div>
+            <p class="acremark-label">Forest Management, On One Map</p>
+            <h3 class="acremark-title"><span class="am-big">A</span>cre<span class="am-big">M</span>ark</h3>
+            <p class="am-lead">AcreMark is the property app we built and use on the land we manage. For the timber side, it keeps the stand map, the numbers, and the plan together, so the landowner, the forester, and the logger are all looking at the same thing.</p>
+          </div>
+        </div>
+        <div class="am-groups">
+          <div class="am-group">
+            <h4>Know Your Timber</h4>
+            <ul>
+              <li>Stand map with species, age, and type for every stand</li>
+              <li>A timber summary for each stand that opens up into the full detail</li>
+              <li>Growth and yield for the species on each stand, for its location</li>
+              <li>Timber values, so you know what the woods are worth before anyone makes an offer</li>
+            </ul>
+          </div>
+          <div class="am-group">
+            <h4>Plan the Work</h4>
+            <ul>
+              <li>Burn plans and burn units laid out on the map</li>
+              <li>Thinning, site prep, planting, and other management practices by stand</li>
+              <li>A dated action plan, so you know what comes next and when</li>
+              <li>Field photos and notes pinned exactly where they were taken, with the time and weather</li>
+            </ul>
+          </div>
+          <div class="am-group">
+            <h4>Bring What You Have</h4>
+            <ul>
+              <li>Shapefiles, file geodatabases, KML/KMZ, and surveys load straight in</li>
+              <li>Drone photos and video tied to the ground they cover</li>
+              <li>Satellite and USGS imagery underneath it all</li>
+            </ul>
+          </div>
+        </div>
+        <p class="am-edition">Timber tools come in the <strong>Land</strong> and <strong>Complete</strong> editions. Burn plans and the full action plan are in Complete.</p>
+        <a href="#contact" class="btn-outline" style="display:inline-block;margin-top:1rem;">Ask About AcreMark</a>
+      </div>
     </div>
 
     <!-- TAB: WILDLIFE -->
@@ -800,25 +850,53 @@
           <p>Food plot design, habitat structure improvements, and prescribed management for white-tailed deer, turkey, quail, waterfowl, and non-game species.</p>
         </div>
       </div>
-      <div class="acremark-feature">
-        <div class="acremark-text">
-          <p class="acremark-label">Our Own Tool</p>
-          <h3 class="acremark-title"><span class="am-big">A</span>cre<span class="am-big">M</span>ark</h3>
-          <p>AcreMark is the land and hunting management app we built and use on the properties we manage. Everything about the place lives on one map.</p>
-          <ul class="acremark-list">
-            <li>Satellite map with your boundaries, stands, roads, and food plots</li>
-            <li>Hunt sign-ups, so everyone knows who is hunting where, in real time</li>
-            <li>Harvest records for deer, turkey, bobcat, and other game and non-game wildlife</li>
-            <li>Feeders and trail cameras pinned on the map</li>
-            <li>Field photos pinned where they were taken, with the time and the weather</li>
-            <li>Works offline in the woods, and only the people you invite can see it</li>
-          </ul>
-          <a href="#contact" class="btn-outline" style="display:inline-block;margin-top:1.2rem;">Ask About AcreMark</a>
+      <div class="am-panel">
+        <div class="am-head">
+          <div>
+            <p class="acremark-label">Hunting &amp; Wildlife, On One Map</p>
+            <h3 class="acremark-title"><span class="am-big">A</span>cre<span class="am-big">M</span>ark</h3>
+            <p class="am-lead">Most hunting properties are run out of a group text and a truck console: stand locations in somebody&rsquo;s head, harvest numbers in a notebook, trail camera pictures on three different phones. AcreMark puts all of it on one map that works in the woods.</p>
+          </div>
+          <div class="acremark-shots">
+            <img src="acremark-map.jpg" alt="AcreMark property map" class="am-shot" onerror="this.remove()">
+            <img src="acremark-options.jpg" alt="AcreMark hunting and wildlife options" class="am-shot" onerror="this.remove()">
+          </div>
         </div>
-        <div class="acremark-shots">
-          <img src="acremark-map.jpg" alt="AcreMark property map" class="am-shot am-main" onerror="this.remove()">
-          <img src="acremark-options.jpg" alt="AcreMark hunting and wildlife options" class="am-shot" onerror="this.remove()">
+        <div class="am-groups">
+          <div class="am-group">
+            <h4>Run the Hunt</h4>
+            <ul>
+              <li>Stands, blinds, feeders, food plots, and trail cameras pinned on a satellite map</li>
+              <li>Hunt sign-ups and a group board, so everyone sees who is hunting where in real time</li>
+              <li>Works offline where there is no signal</li>
+            </ul>
+          </div>
+          <div class="am-group">
+            <h4>Track the Wildlife</h4>
+            <ul>
+              <li>Harvest records for deer, turkey, bobcat, and other game and non-game species</li>
+              <li>Trail camera photos filed by location, with the time and the weather when each was taken</li>
+              <li>Habitat work and food plots tied to the stands they support</li>
+            </ul>
+          </div>
+          <div class="am-group">
+            <h4>Keep It Yours</h4>
+            <ul>
+              <li>Invite-only: the landowner decides who gets in</li>
+              <li>Each hunter chooses which of their own entries to share</li>
+              <li>The landowner can keep sections private</li>
+            </ul>
+          </div>
+          <div class="am-group">
+            <h4>For Landowners Who Lease</h4>
+            <ul>
+              <li>Hunt lease tracking alongside the rest of the property</li>
+              <li>Hunters use the tools without being able to change what the landowner set up</li>
+            </ul>
+          </div>
         </div>
+        <p class="am-edition">Built around the <strong>Hunt &amp; Wildlife Management</strong> edition, also in Complete.</p>
+        <a href="#contact" class="btn-outline" style="display:inline-block;margin-top:1rem;">Ask About AcreMark</a>
       </div>
     </div>
 
@@ -835,6 +913,49 @@
           <h3>Conservation Programs</h3>
           <p>Assistance enrolling in USDA programs including EQIP, RCPP, and CRP, as well as forest stewardship plans.</p>
         </div>
+      </div>
+      <div class="am-panel">
+        <div class="am-head">
+          <div>
+            <p class="acremark-label">Land Management, On One Map</p>
+            <h3 class="acremark-title"><span class="am-big">A</span>cre<span class="am-big">M</span>ark</h3>
+            <p class="am-lead">For owners, buyers, and sellers, AcreMark keeps the property&rsquo;s whole story in one place: where the lines are, what has been done, what it is worth, and what it qualifies for.</p>
+          </div>
+        </div>
+        <div class="am-groups">
+          <div class="am-group">
+            <h4>The Land Record</h4>
+            <ul>
+              <li>Boundaries, roads, and management compartments on one map</li>
+              <li>Surveys, plats, and GIS files loaded in, not filed in a drawer</li>
+              <li>A running history of the work done on the property</li>
+            </ul>
+          </div>
+          <div class="am-group">
+            <h4>Programs &amp; Cost-Share</h4>
+            <ul>
+              <li>Conservation practices and cost-share work tracked by field and stand</li>
+              <li>A dated action plan that lines up with your program contracts</li>
+            </ul>
+          </div>
+          <div class="am-group">
+            <h4>Buying &amp; Selling</h4>
+            <ul>
+              <li>Land and timber values for the property</li>
+              <li>Comparable sales pulled for the area</li>
+              <li>A clear picture of the timber, access, and habitat a buyer is paying for</li>
+            </ul>
+          </div>
+          <div class="am-group">
+            <h4>Everyone in Their Lane</h4>
+            <ul>
+              <li>Landowner, hunter, and land manager each see the tools that fit their role</li>
+              <li>Only the people the owner invites can see it</li>
+            </ul>
+          </div>
+        </div>
+        <p class="am-edition">Built around the <strong>Land</strong> edition. Cost-share practices and the action plan are in Complete.</p>
+        <a href="#contact" class="btn-outline" style="display:inline-block;margin-top:1rem;">Ask About AcreMark</a>
       </div>
     </div>
 
