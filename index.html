@@ -662,6 +662,14 @@
   .am-edition { font-family: 'DM Sans', Arial, sans-serif; color: var(--lichen); font-size: 0.85rem; margin: 1.4rem 0 0; }
   .am-edition strong { color: var(--cream); }
   @media (max-width: 900px) { .am-panel { padding: 1.4rem; } .am-head, .am-groups { grid-template-columns: 1fr; } }
+  .cs-stat { font-family: 'DM Sans', Arial, sans-serif; color: var(--fog) !important; font-size: 0.9rem; margin: 0.2rem 0 0.9rem; }
+  .cs-stat span { display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.3rem; font-weight: 700; color: var(--gold-light); line-height: 1.1; }
+  .service-card p + p { margin-top: 0.7rem; }
+  .services-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 700px) { .services-grid.two-col { grid-template-columns: 1fr; } }
+  .about-photo { margin: 2rem 0 0; }
+  .about-photo img { width: 100%; max-width: 420px; height: auto; display: block; border: 1px solid rgba(200,151,58,0.35); box-shadow: 0 10px 30px rgba(0,0,0,0.45); }
+  .about-photo figcaption { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.75rem; color: var(--stone); margin-top: 0.5rem; }
 </style>
 </head>
 <body>
@@ -732,6 +740,10 @@
     <div>
       <p class="about-label">Who We Are</p>
       <h2 class="about-heading">Grounded in the <em>Southern Forest</em></h2>
+      <figure class="about-photo">
+        <img src="family-photo.jpg" alt="Casey Newton and family">
+        <figcaption>The Newton family &middot; Photo: Rebekah Photography</figcaption>
+      </figure>
     </div>
     <div>
       <p class="about-text">ForestWild Consultants LLC is a professional forestry and wildlife consulting firm headquartered in Florence, Alabama. We bring hands-on expertise in timber management, wildlife habitat enhancement, and land stewardship across the hardwood and pine forests of the Southeast.</p>
@@ -740,12 +752,15 @@
       </blockquote>
       <div class="about-sig">Casey Newton <span class="owner-title">— Owner, ForestWild Consultants LLC</span></div>
       <ul class="cred-list">
+        <li><strong>M.S., Forest Resources</strong> — Clemson University, 2007</li>
+        <li><strong>B.S., Operations Management</strong> — Auburn University, 2000</li>
         <li><strong>Registered Forester</strong> — Alabama #2144 · Mississippi #2651</li>
         <li><strong>Accredited Forester</strong> — Tennessee #044</li>
+        <li><strong>Certified Prescribed Burn Manager</strong> — Alabama</li>
         <li><strong>1,000,000+ acres managed</strong> across TIMOs, family trusts, military installations, and private ownerships</li>
         <li><strong>Former Region Manager</strong>, American Forest Management (640,000+ acres)</li>
         <li><strong>Former forester / land manager</strong>, Regions Bank Natural Resources</li>
-        <li><strong>U.S. Army combat veteran</strong> — Infantry Captain, 10th Mountain Division · Ranger &amp; Airborne qualified</li>
+        <li><strong>U.S. Army combat veteran</strong> — Infantry Officer, 10th Mountain Division</li>
       </ul>
     </div>
   </div>
@@ -778,7 +793,7 @@
         <div class="service-card">
           <div class="service-icon">🔥</div>
           <h3>Prescribed Fire &amp; TSI</h3>
-          <p>Prescribed burning plans and timber stand improvement treatments to reduce fuels, control competition, improve wildlife habitat, and restore open woodland structure.</p>
+          <p>Prescribed burning plans and timber stand improvement treatments to reduce fuels, control competition, improve wildlife habitat, and restore open woodland structure. Burns are led by an Alabama Certified Prescribed Burn Manager.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">🌱</div>
@@ -902,7 +917,7 @@
 
     <!-- TAB: LAND MANAGEMENT -->
     <div class="tab-panel" id="tab-landmgmt">
-      <div class="services-grid">
+      <div class="services-grid two-col">
         <div class="service-card">
           <div class="service-icon">📋</div>
           <h3>Boundary &amp; Inventory Services</h3>
@@ -910,8 +925,10 @@
         </div>
         <div class="service-card">
           <div class="service-icon">💰</div>
-          <h3>Conservation Programs</h3>
-          <p>Assistance enrolling in USDA programs including EQIP, RCPP, and CRP, as well as forest stewardship plans.</p>
+          <h3>Conservation Programs &amp; Cost-Share</h3>
+          <p class="cs-stat"><span>$2 million+</span> in cost-share secured for our clients in 2026</p>
+          <p>Once we understand your goals and the work your property needs, we work alongside you and handle the coordination with NRCS and the other agencies and partners involved, through EQIP, CSP, RCPP, CRP, and forest stewardship plans.</p>
+          <p>NRCS and its partners are good at what they do. Our job is to make it easier for them to help you.</p>
         </div>
       </div>
       <div class="am-panel">
